@@ -19,7 +19,7 @@ SYSTEM_PROMPT = """
 if st.button("🚀 สรุปรายงานสำหรับผู้บริหาร"):
     try:
         # ใช้คำสั่งเรียกแบบเจาะจงรุ่นที่เสถียรที่สุด
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-pro')
         response = model.generate_content(SYSTEM_PROMPT + "\nสรุปงานเป็นข้อๆ ให้หน่อย")
         st.markdown(response.text)
     except Exception as e:
