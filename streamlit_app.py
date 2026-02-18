@@ -22,7 +22,7 @@ if st.button("🚀 สรุปรายงานสำหรับผู้บ�
     with st.spinner('กำลังประมวลผล...'):
         try:
             # ใช้รุ่น gemini-1.5-flash ในรูปแบบที่รองรับเวอร์ชันเก่าและใหม่
-            model = genai.GenerativeModel(model_name="gemini-1.5-flash")
+            model = genai.GenerativeModel(model_name="gemini-1.0-pro")
             response = model.generate_content(SYSTEM_PROMPT + "\nช่วยสรุป Progress งานเป็นข้อๆ")
             st.markdown("### 📝 สรุปความคืบหน้าสำหรับผู้บริหาร")
             st.markdown(response.text)
